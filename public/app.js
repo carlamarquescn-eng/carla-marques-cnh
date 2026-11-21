@@ -183,7 +183,7 @@
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.outputEncoding = T.sRGBEncoding;
     renderer.toneMapping = T.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.15;
+    renderer.toneMappingExposure = 0.9;
 
     var scene = new T.Scene();
     scene.fog = new T.Fog(0x0b1d21, 9, 26);
@@ -206,9 +206,9 @@
     scene.environment = pm.fromScene(env, 0.02).texture;
 
     scene.add(new T.AmbientLight(0xffffff, 0.25));
-    var key = new T.DirectionalLight(0xfff0c8, 1.6); key.position.set(4, 6, 6); scene.add(key);
+    var key = new T.DirectionalLight(0xfff0c8, 1.1); key.position.set(4, 6, 6); scene.add(key);
     var rim = new T.PointLight(0x7fe0c2, 2.2, 20); rim.position.set(-5, 1, 2); scene.add(rim);
-    var warm = new T.PointLight(0xd8b25a, 2.5, 18); warm.position.set(3, -2, 4); scene.add(warm);
+    var warm = new T.PointLight(0xd8b25a, 1.6, 18); warm.position.set(3, -2, 4); scene.add(warm);
 
     var rig = new T.Group(); scene.add(rig);
 
@@ -228,8 +228,8 @@
       x.font = "700 22px Figtree, sans-serif"; x.fillStyle = "rgba(255,246,220,.85)"; x.fillText("FACILITAÇÃO DE CNH", 256, 392);
       var t = new T.CanvasTexture(c); t.encoding = T.sRGBEncoding; t.anisotropy = 8; t.center.set(0.5, 0.5); t.rotation = Math.PI / 2; return t;
     }
-    var faceMat = new T.MeshStandardMaterial({ map: faceTex(), metalness: 0.85, roughness: 0.28 });
-    var edgeMat = new T.MeshStandardMaterial({ color: 0xc9972e, metalness: 1, roughness: 0.22 });
+    var faceMat = new T.MeshStandardMaterial({ map: faceTex(), metalness: 0.55, roughness: 0.38, envMapIntensity: 0.6 });
+    var edgeMat = new T.MeshStandardMaterial({ color: 0xc9972e, metalness: 1, roughness: 0.3, envMapIntensity: 0.75 });
     var coin = new T.Mesh(new T.CylinderGeometry(1.55, 1.55, 0.22, 96, 1), [edgeMat, faceMat, faceMat]);
     coin.rotation.x = Math.PI / 2;
     var coinG = new T.Group(); coinG.add(coin); coinG.position.set(2.5, 0.75, 0); rig.add(coinG);
