@@ -1,0 +1,15 @@
+{
+  "name": "carla-marques-cnh",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site Carla Marques CNH com assistente de IA e botão para WhatsApp",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}
