@@ -197,9 +197,9 @@
     var ec = document.createElement("canvas"); ec.width = 512; ec.height = 256;
     var ex = ec.getContext("2d");
     var eg = ex.createLinearGradient(0, 0, 0, 256);
-    eg.addColorStop(0, "#fff3cf"); eg.addColorStop(0.35, "#6f5a2c"); eg.addColorStop(0.6, "#10282c"); eg.addColorStop(1, "#050d0f");
+    eg.addColorStop(0, "#b89a5a"); eg.addColorStop(0.35, "#4a3c1e"); eg.addColorStop(0.6, "#10282c"); eg.addColorStop(1, "#050d0f");
     ex.fillStyle = eg; ex.fillRect(0, 0, 512, 256);
-    ex.fillStyle = "rgba(255,255,255,.9)"; ex.fillRect(60, 40, 120, 18); ex.fillRect(330, 60, 140, 14);
+    ex.fillStyle = "rgba(255,244,214,.45)"; ex.fillRect(60, 40, 120, 14); ex.fillRect(330, 60, 140, 10);
     ex.fillStyle = "rgba(127,224,194,.6)"; ex.fillRect(0, 150, 512, 6);
     var envTex = new T.CanvasTexture(ec);
     env.add(new T.Mesh(envGeo, new T.MeshBasicMaterial({ map: envTex, side: T.BackSide })));
@@ -228,7 +228,7 @@
       x.font = "700 22px Figtree, sans-serif"; x.fillStyle = "rgba(255,246,220,.85)"; x.fillText("FACILITAÇÃO DE CNH", 256, 392);
       var t = new T.CanvasTexture(c); t.encoding = T.sRGBEncoding; t.anisotropy = 8; t.center.set(0.5, 0.5); t.rotation = Math.PI / 2; return t;
     }
-    var faceMat = new T.MeshStandardMaterial({ map: faceTex(), metalness: 0.55, roughness: 0.38, envMapIntensity: 0.6 });
+    var faceMat = new T.MeshStandardMaterial({ map: faceTex(), metalness: 0.45, roughness: 0.42, envMapIntensity: 0.5 });
     var edgeMat = new T.MeshStandardMaterial({ color: 0xc9972e, metalness: 1, roughness: 0.3, envMapIntensity: 0.75 });
     var coin = new T.Mesh(new T.CylinderGeometry(1.55, 1.55, 0.22, 96, 1), [edgeMat, faceMat, faceMat]);
     coin.rotation.x = Math.PI / 2;
