@@ -119,7 +119,15 @@ async function handleChat(req, res) {
 
 function serveStatic(req, res) {
   let urlPath = decodeURIComponent(new URL(req.url, "http://x").pathname);
-  if (urlPath.endsWith("/")) urlPath += "index.html";
+  // /renovacao/ -> /renovacao (endereço único para SEO e anúncios)
+  if (urlPath.length > 1 && urlPath.endsWith("/")) {
+    const q = new URL(req.url, "http://x").search;
+    res.writeHead(301, { Location: urlPath.replace(/\/+$/, "") + q });
+    return res.end();
+  }
+  if (urlPath === "/") urlPath = "/index.html";
+  // /renovacao -> public/renovacao.html
+  else if (!path.extname(urlPath)) urlPath += ".html";
   const file = path.normalize(path.join(PUBLIC_DIR, urlPath));
   if (!file.startsWith(PUBLIC_DIR)) return send(res, 403, "Proibido");
   fs.readFile(file, (err, buf) => {
