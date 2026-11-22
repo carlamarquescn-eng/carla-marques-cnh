@@ -142,7 +142,10 @@ function serveStatic(req, res) {
     if (SITE_URL && [".html", ".xml", ".txt", ".webmanifest"].includes(ext)) {
       body = buf.toString("utf8").split("https://www.carlamarquescnh.com.br").join(SITE_URL);
     }
-    const cache = ext === ".html" ? "public, max-age=300" : "public, max-age=604800";
+    // HTML: navegador 5 min; borda do Cloudflare 1 h e cópia antiga servida enquanto o Render acorda.
+    const cache = ext === ".html"
+      ? "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400, stale-if-error=86400"
+      : "public, max-age=604800";
     send(res, 200, body, { "Content-Type": TYPES[ext] || "application/octet-stream", "Cache-Control": cache });
   });
 }
