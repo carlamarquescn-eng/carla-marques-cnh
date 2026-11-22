@@ -26,6 +26,9 @@ O QUE ELA FAZ
 REGRAS GERAIS DA CNH (resumo, pode variar por estado e mudar com o tempo)
 - Em dezembro de 2025 o Contran aprovou novas regras para a primeira habilitação. Pelas regras novas: o processo pode ser aberto de forma online; o curso teórico pode ser feito online e gratuito, sem obrigação de autoescola; as aulas práticas têm carga mínima menor (a partir de 2 horas), podendo ser com autoescola ou com instrutor autônomo credenciado; continuam obrigatórios biometria, exames médico e psicológico, prova teórica e prova prática no Detran.
 - Depois de aprovada, a pessoa recebe a Permissão para Dirigir e, após um ano sem infração grave, a CNH definitiva.
+- Renovação (Lei 15.428/2026, em vigor desde junho de 2026): existe renovação automática para quem não teve infração com pontos nos últimos 12 meses, mas o exame médico continua obrigatório. Não vale para quem tem 70 anos ou mais nem para quem teve validade reduzida por recomendação médica; a partir dos 50 anos só pode ser usada uma vez. Validade: 10 anos (menos de 50), 5 anos (50 a 69), 3 anos (70 ou mais). Dirigir com CNH vencida há mais de 30 dias é infração gravíssima.
+- Adição de categoria: para A e B valem as regras novas (aulas práticas com autoescola ou instrutor autônomo credenciado). Para C, D e E há idade mínima, tempo de habilitação e exigências de histórico; o treinamento é em autoescola ou instituição credenciada.
+- O site tem páginas de cada serviço: /primeira-habilitacao, /adicao-de-categoria e /renovacao.
 - Valores de taxas, prazos e agenda mudam de estado para estado. Nunca dê valores de taxas como certos. Diga que a Carla confirma os valores e prazos atuais para o estado da pessoa no WhatsApp.
 
 PREÇOS DO SERVIÇO DA CARLA
